@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Quote, ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import { Reveal } from "./reveal"
+import { SectionHeader } from "./ui/section-header"
 import { ProjectModal } from "./project-modal"
 import type { Project } from "@/types/project"
 import { FEATURED_PROJECTS, OTHER_PROJECTS } from "@/data/projects"
@@ -27,16 +28,15 @@ export function Projects() {
   }
 
   return (
-    <section
-      className="relative py-24 overflow-hidden"
-      style={{ background: `linear-gradient(180deg, #0d1a2e 0%, #13213C 100%)` }}
-    >
+    <section className="relative py-24 overflow-hidden bg-section-navy-gradient">
       {/* Header */}
       <div className="mb-12 text-center px-4">
         <Reveal>
-          <h2 className="text-white font-bold text-4xl lg:text-5xl mb-4">Projetos e Depoimentos</h2>
-          <div className="w-16 h-1 bg-[#FCA311] mx-auto mb-4 rounded-full" />
-          <p className="text-[#FCA311] font-semibold text-base">O que já realizamos e o que dizem sobre nós</p>
+          <SectionHeader
+            title="Projetos e Depoimentos"
+            subtitle="O que já realizamos e o que dizem sobre nós"
+            className="mb-0"
+          />
         </Reveal>
       </div>
 
@@ -62,7 +62,7 @@ export function Projects() {
             <div className="absolute bottom-0 left-0 right-0 p-6">
               <div className="flex items-end justify-between gap-4">
                 <div>
-                  <span className="text-xs text-[#FCA311] uppercase tracking-widest font-semibold">{project.category}</span>
+                  <span className="text-xs text-brand uppercase tracking-widest font-semibold">{project.category}</span>
                   <h3 className="text-white font-bold text-2xl leading-tight">{project.name}</h3>
                   <p className="text-white/50 text-sm">{project.location}</p>
                 </div>
@@ -72,11 +72,11 @@ export function Projects() {
                   animate={{ opacity: active === i ? 1 : 0, x: active === i ? 0 : 20 }}
                   transition={{ duration: 0.5, delay: 0.15 }}
                 >
-                  <Quote size={14} className="text-[#FCA311] mb-1" />
+                  <Quote size={14} className="text-brand mb-1" />
                   <p className="text-white/80 text-xs leading-relaxed italic line-clamp-3">
                     {project.testimonial?.text}
                   </p>
-                  <p className="text-[#FCA311] font-semibold text-xs mt-2">{project.testimonial?.author}</p>
+                  <p className="text-brand font-semibold text-xs mt-2">{project.testimonial?.author}</p>
                 </motion.div>
               </div>
             </div>
@@ -114,7 +114,7 @@ export function Projects() {
                   card.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" })
                 }
               }}
-              className={`h-1.5 rounded-full transition-all duration-300 ${active === i ? "w-6 bg-[#FCA311]" : "w-1.5 bg-white/30"}`}
+              className={`h-1.5 rounded-full transition-all duration-300 ${active === i ? "w-6 bg-brand" : "w-1.5 bg-white/30"}`}
             />
           ))}
         </div>
@@ -151,9 +151,9 @@ export function Projects() {
               >
                 <Image src={project.images[0]} alt={project.name} fill className="object-cover" />
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute inset-0 bg-[#FCA311]/0 group-hover:bg-[#FCA311]/10 transition-colors duration-200" />
+                <div className="absolute inset-0 bg-brand/0 group-hover:bg-brand/10 transition-colors duration-200" />
                 <div className="absolute bottom-0 left-0 right-0 p-2.5">
-                  <span className="text-[10px] text-[#FCA311]/80 uppercase tracking-widest font-semibold block">{project.category}</span>
+                  <span className="text-[10px] text-brand/80 uppercase tracking-widest font-semibold block">{project.category}</span>
                   <p className="text-white font-semibold text-xs leading-tight">{project.name}</p>
                 </div>
               </motion.div>

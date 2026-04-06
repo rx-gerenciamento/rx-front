@@ -27,7 +27,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-[#13213C]">
+    <footer className="bg-navy">
       <div className="container-custom pt-14 pb-10">
         <div className="grid py-4 grid-cols-1 md:grid-cols-[2fr_1.5fr_1.5fr] gap-10 lg:gap-14 mb-10">
 
@@ -56,13 +56,13 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-sm font-semibold mt-5 uppercase tracking-widest text-[#FCA311] mb-6">
+            <h4 className="text-sm font-semibold mt-5 uppercase tracking-widest text-brand mb-6">
               Contato
             </h4>
             <ul className="flex flex-col gap-4">
               {contactInfo.map(({ icon: Icon, text, href }) => (
                 <li key={text} className="flex items-start gap-3">
-                  <Icon size={17} className="shrink-0 mt-0.5 text-[#FCA311]" />
+                  <Icon size={17} className="shrink-0 mt-0.5 text-brand" />
                   {href ? (
                     <a
                       href={href}
@@ -84,7 +84,7 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-sm font-semibold mt-5 uppercase tracking-widest text-[#FCA311] mb-6">
+            <h4 className="text-sm font-semibold mt-5 uppercase tracking-widest text-brand mb-6">
               Redes sociais
             </h4>
             <div className="flex flex-col gap-4">
@@ -96,7 +96,7 @@ export function Footer() {
                   whileHover={{ x: 4 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="w-8 h-8 bg-white/8 group-hover:bg-[#FCA311]/15 border border-white/10 group-hover:border-[#FCA311]/30 rounded-lg flex items-center justify-center transition-all duration-200 group-hover:text-[#FCA311]">
+                  <div className="w-8 h-8 bg-white/8 group-hover:bg-brand/15 border border-white/10 group-hover:border-brand/30 rounded-lg flex items-center justify-center transition-all duration-200 group-hover:text-brand">
                     {social.isLucide
                       ? <social.icon size={15} />
                       : <social.icon />

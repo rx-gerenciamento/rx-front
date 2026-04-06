@@ -23,7 +23,7 @@ export function Header() {
     <>
       <motion.header
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md border-b border-white/10"
-        style={{ backgroundColor: isScrolled || menuOpen ? "#2C2F32F2" : "transparent" }}
+        style={{ backgroundColor: isScrolled || menuOpen ? "color-mix(in srgb, var(--color-header) 95%, transparent)" : "transparent" }}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
@@ -89,7 +89,7 @@ export function Header() {
         {menuOpen && (
           <motion.div
             className="fixed top-12 left-0 right-0 z-40 backdrop-blur-md border-b border-white/10 md:hidden"
-            style={{ backgroundColor: "#2C2F32F2" }}
+            style={{ backgroundColor: "color-mix(in srgb, var(--color-header) 95%, transparent)" }}
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}

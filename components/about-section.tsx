@@ -23,16 +23,13 @@ export function AboutSection() {
 
           <div className="flex flex-col gap-4">
             <Reveal>
-              <span
-                className="text-sm font-semibold uppercase tracking-widest"
-                style={{ color: "#FCA311" }}
-              >
+              <span className="text-label text-brand">
                 Sobre nós
               </span>
             </Reveal>
 
             <Reveal delay={0.05}>
-              <h2 className="text-4xl lg:text-5xl font-bold text-[#13213C]">
+              <h2 className="text-4xl lg:text-5xl font-bold text-navy">
                 Sobre a RX
               </h2>
             </Reveal>
@@ -54,7 +51,7 @@ export function AboutSection() {
             </Reveal>
 
             <Reveal delay={0.2}>
-              <p className="text-base font-semibold leading-relaxed" style={{ color: "#FCA311" }}>
+              <p className="text-base font-semibold leading-relaxed text-brand">
                 Já somamos mais de R$ 328 milhões orçados e R$ 248 milhões em obras
                 públicas, além de dezenas de empreendimentos acompanhados e
                 gerenciados em todo o Brasil.

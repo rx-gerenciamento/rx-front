@@ -33,7 +33,7 @@ export function CollectionStrip() {
   }, [])
 
   return (
-    <section ref={containerRef} className="py-20 lg:py-20 overflow-hidden bg-[#13213C]">
+    <section ref={containerRef} className="py-20 lg:py-20 overflow-hidden bg-navy">
       <div className="mb-12">
         <Reveal>
           <div className="container-custom text-center">
@@ -60,7 +60,7 @@ export function CollectionStrip() {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3, ease: [0.21, 0.47, 0.32, 0.98] }}
             >
-              <div className="rounded-2xl overflow-hidden bg-[#0d1b2e] border border-white/10 flex flex-col">
+              <div className="rounded-2xl overflow-hidden bg-navy-900 border border-white/10 flex flex-col">
                 <div className="relative h-52 w-full overflow-hidden">
                   <Image
                     src={collection.image}
@@ -69,7 +69,7 @@ export function CollectionStrip() {
                     className="object-cover"
                     sizes="288px"
                   />
-                  <div className="absolute inset-0 bg-linear-to-b from-transparent to-[#0d1b2e]/60" />
+                  <div className="absolute inset-0 bg-linear-to-b from-transparent to-navy-900/60" />
                 </div>
 
                 <div className="p-5 flex flex-col gap-3">

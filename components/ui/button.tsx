@@ -25,7 +25,7 @@ export function Button({
   const base = "inline-block px-8 py-3 font-semibold rounded-sm transition-colors cursor-pointer"
 
   const variants = {
-    primary: "bg-[#FCA311] text-white hover:bg-[#FCA311]/90",
+    primary: "bg-brand text-white hover:bg-brand/90",
     outline: "border border-white text-white hover:bg-white/10",
   }
 

@@ -37,13 +37,7 @@ export function HeroSection() {
           priority
           sizes="100vw"
         />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(to top, #111E37 0%, rgba(19, 33, 60, 0.65) 50%, rgba(19, 33, 60, 0.35) 100%)",
-          }}
-        />
+        <div className="absolute inset-0 hero-overlay" />
       </motion.div>
 
       <motion.div

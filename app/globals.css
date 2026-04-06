@@ -243,6 +243,16 @@
   --color-neutral-400: #c9b8a7;
   --color-white: #ffffff;
 
+  /* Brand Identity Colors */
+  --color-brand: #FCA311;
+  --color-navy: #13213C;
+  --color-navy-950: #0d1a2e;
+  --color-navy-900: #0d1b2e;
+  --color-navy-800: #1a2d4a;
+  --color-navy-700: #1f3459;
+  --color-navy-hero: #111E37;
+  --color-header: #2C2F32;
+
   /* Spacing Scale */
   --space-1: 8px;
   --space-2: 16px;
@@ -387,6 +397,27 @@
   .grain-texture {
     background-image: radial-gradient(circle at 1px 1px, rgba(11, 11, 11, 0.15) 1px, transparent 0);
     background-size: 20px 20px;
+  }
+
+  /* Hero overlay gradient */
+  .hero-overlay {
+    background: linear-gradient(
+      to top,
+      var(--color-navy-hero) 0%,
+      rgba(19, 33, 60, 0.65) 50%,
+      rgba(19, 33, 60, 0.35) 100%
+    );
+  }
+
+  /* Section backgrounds */
+  .bg-section-navy-glow {
+    background:
+      radial-gradient(ellipse 90% 60% at 50% 110%, rgba(252,163,17,0.18) 0%, rgba(252,163,17,0.06) 40%, transparent 70%),
+      var(--color-navy);
+  }
+
+  .bg-section-navy-gradient {
+    background: linear-gradient(180deg, var(--color-navy-950) 0%, var(--color-navy) 100%);
   }
 
   /* Performance optimizations */
