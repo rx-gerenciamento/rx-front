@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils"
 
 type ButtonProps = {
   children: React.ReactNode
-  variant?: "primary" | "outline"
+  variant?: "primary" | "outline" | "dark" | "outline-dark"
   href?: string
   target?: string
   rel?: string
@@ -22,11 +22,13 @@ export function Button({
   onClick,
   className,
 }: ButtonProps) {
-  const base = "inline-block px-8 py-3 font-semibold rounded-sm transition-colors cursor-pointer"
+  const base = "inline-flex items-center justify-center px-8 py-3 font-semibold rounded-sm transition-colors cursor-pointer"
 
   const variants = {
     primary: "bg-brand text-white hover:bg-brand/90",
     outline: "border border-white text-white hover:bg-white/10",
+    dark: "bg-navy text-white hover:bg-navy/85",
+    "outline-dark": "border border-navy text-navy hover:bg-navy/10",
   }
 
   const classes = cn(base, variants[variant], className)

@@ -14,10 +14,6 @@ export const FEATURED_PROJECTS: Project[] = [
     },
     description:
       "Projeto residencial de alto padrão com foco em sustentabilidade e integração com a natureza. A RX gerenciou todas as etapas da obra com precisão, entregando o imóvel dentro do prazo e do orçamento previsto.",
-    stats: [
-      { label: "Prazo", value: "8 meses" },
-      { label: "Área", value: "420m²" },
-    ],
   },
   {
     id: 2,
@@ -32,10 +28,6 @@ export const FEATURED_PROJECTS: Project[] = [
     },
     description:
       "Reforma e expansão de unidade comercial com foco em funcionalidade e identidade visual da marca. Prazo cumprido e execução impecável, garantindo a operação sem interrupções durante a obra.",
-    stats: [
-      { label: "Prazo", value: "3 meses" },
-      { label: "Área", value: "180m²" },
-    ],
   },
   {
     id: 3,
@@ -50,10 +42,6 @@ export const FEATURED_PROJECTS: Project[] = [
     },
     description:
       "Gerenciamento completo da construção de clínica médica de alto padrão. A equipe da RX conduziu todo o processo com transparência e excelência, do planejamento à entrega.",
-    stats: [
-      { label: "Prazo", value: "12 meses" },
-      { label: "Área", value: "680m²" },
-    ],
   },
   {
     id: 4,
@@ -68,10 +56,6 @@ export const FEATURED_PROJECTS: Project[] = [
     },
     description:
       "Parceria estratégica em gestão de obra com implementação de dashboards em Power BI para acompanhamento em tempo real de cronograma, custos e indicadores de desempenho.",
-    stats: [
-      { label: "Prazo", value: "18 meses" },
-      { label: "Área", value: "2.100m²" },
-    ],
   },
 ]
 
@@ -93,7 +77,6 @@ export const OTHER_PROJECTS: Project[] = [
     images: ["/servicos/orcamento.png", "/servicos/gerenciamento.png"],
     description:
       "Edifício corporativo com 8 andares gerenciado com metodologia BIM. Zero retrabalho e entrega no prazo.",
-    stats: [{ label: "Área", value: "2.400m²" }],
   },
   {
     id: 7,

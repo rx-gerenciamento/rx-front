@@ -17,6 +17,5 @@ export type Project = {
   images: string[]
   testimonial?: ProjectTestimonial
   description: string
-  stats?: ProjectStat[]
   year?: string
 }

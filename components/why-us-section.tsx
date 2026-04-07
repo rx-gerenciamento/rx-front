@@ -9,7 +9,7 @@ import { DIFFERENTIALS } from "@/data/differentials"
 export function WhyUsSection() {
   return (
     <section
-      className="relative py-24 overflow-hidden bg-section-navy-glow"
+      className="relative py-12 overflow-hidden bg-section-navy-glow"
       id="DIFFERENTIALS"
     >
       <div className="container-custom">

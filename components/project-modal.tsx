@@ -89,18 +89,6 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
             <p className="text-white/60 text-sm">{project.location}</p>
           </div>
 
-          {/* Stats */}
-          {project.stats && (
-            <div className="absolute bottom-4 right-5 flex gap-2">
-              {project.stats.map((s) => (
-                <div key={s.label} className="bg-black/40 backdrop-blur-sm rounded-lg px-3 py-1.5 text-center">
-                  <p className="text-white font-bold text-sm">{s.value}</p>
-                  <p className="text-white/60 text-xs">{s.label}</p>
-                </div>
-              ))}
-            </div>
-          )}
-
           {/* Dot indicators */}
           {project.images.length > 1 && (
             <div className="absolute top-3 left-1/2 -translate-x-1/2 flex gap-1.5">

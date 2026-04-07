@@ -252,6 +252,8 @@
   --color-navy-700: #1f3459;
   --color-navy-hero: #111E37;
   --color-header: #2C2F32;
+  --color-gray-light: #E5E5E5;
+  --color-solid-black: #030303;
 
   /* Spacing Scale */
   --space-1: 8px;
@@ -418,6 +420,10 @@
 
   .bg-section-navy-gradient {
     background: linear-gradient(180deg, var(--color-navy-950) 0%, var(--color-navy) 100%);
+  }
+
+  .bg-section-projects {
+    background: linear-gradient(180deg, var(--color-solid-black) 0%, #0a0f1a 100%);
   }
 
   /* Performance optimizations */
