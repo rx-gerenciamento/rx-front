@@ -26,7 +26,7 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
         onClick={onClose}
       />
       <motion.div
-        className="relative w-full max-w-3xl bg-[#13213C] rounded-2xl overflow-hidden shadow-2xl"
+        className="relative w-full max-w-3xl bg-navy rounded-2xl overflow-hidden shadow-2xl"
         initial={{ opacity: 0, scale: 0.92, y: 24 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.92, y: 24 }}
@@ -108,14 +108,14 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
         {/* Content */}
         <div className={`p-6 grid gap-6 ${project.testimonial ? "md:grid-cols-2" : "md:grid-cols-1"}`}>
           <div>
-            <h4 className="text-[#FCA311] font-semibold text-sm uppercase tracking-widest mb-2">Sobre o Projeto</h4>
+            <h4 className="text-brand font-semibold text-sm uppercase tracking-widest mb-2">Sobre o Projeto</h4>
             <p className="text-white/80 text-sm leading-relaxed">{project.description}</p>
           </div>
           {project.testimonial && (
-            <div className="bg-white/5 rounded-xl p-4 border-l-2 border-[#FCA311]">
-              <Quote size={20} className="text-[#FCA311] mb-2" />
+            <div className="bg-white/5 rounded-xl p-4 border-l-2 border-brand">
+              <Quote size={20} className="text-brand mb-2" />
               <p className="text-white/80 text-sm leading-relaxed italic mb-3">{project.testimonial.text}</p>
-              <p className="text-[#FCA311] font-semibold text-sm">{project.testimonial.author}</p>
+              <p className="text-brand font-semibold text-sm">{project.testimonial.author}</p>
               <p className="text-white/40 text-xs">{project.testimonial.city}</p>
             </div>
           )}
