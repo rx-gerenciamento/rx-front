@@ -223,6 +223,9 @@ export function Projects() {
       <AnimatePresence>
         {selected && <ProjectModal project={selected} onClose={() => setSelected(null)} />}
       </AnimatePresence>
+
+      {/* Gradient transition to CTA */}
+      <div className="absolute bottom-0 left-0 right-0 h-48 bg-linear-to-b from-transparent to-gray-300 pointer-events-none z-20" />
     </section>
   )
 }

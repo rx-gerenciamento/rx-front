@@ -29,7 +29,7 @@ export function Footer() {
   return (
     <footer className="bg-navy">
       <div className="container-custom pt-14 pb-10">
-        <div className="grid py-4 grid-cols-1 md:grid-cols-[2fr_1.5fr_1.5fr] gap-10 lg:gap-14 mb-10">
+        <div className="grid py-14 grid-cols-1 md:grid-cols-[2fr_1.5fr_1.5fr] gap-10 lg:gap-14 mb-10">
 
           <motion.div
             className="flex flex-col gap-4"

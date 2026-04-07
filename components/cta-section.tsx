@@ -15,11 +15,10 @@ const WhatsAppIcon = () => (
 
 export function CtaSection() {
   return (
-    <section className="relative py-20 overflow-hidden bg-white border-t-4 border-brand">
+    <section className="relative py-26 overflow-hidden bg-gray-300">
       <div className="container-custom relative z-10 flex flex-col items-center text-center gap-8">
         <Reveal>
           <div className="flex flex-col items-center gap-4">
-            <span className="text-label text-brand">Pronto para começar?</span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight">
               Gostou do que viu?{" "}
               <span className="italic font-light text-brand">Vamos conversar!</span>
@@ -60,6 +59,7 @@ export function CtaSection() {
           </div>
         </Reveal>
       </div>
+
     </section>
   )
 }
