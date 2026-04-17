@@ -62,7 +62,7 @@ export function Footer() {
             <ul className="flex flex-col gap-4">
               {contactInfo.map(({ icon: Icon, text, href }) => (
                 <li key={text} className="flex items-start gap-3">
-                  <Icon size={17} className="shrink-0 mt-0.5 text-brand" />
+                  <Icon size={17} className="shrink-0 mt-0.5 text-white/55" />
                   {href ? (
                     <a
                       href={href}

@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Instagram } from "lucide-react"
 import { Reveal } from "./reveal"
 import { Button } from "./ui/button"
@@ -15,11 +14,11 @@ const WhatsAppIcon = () => (
 
 export function CtaSection() {
   return (
-    <section className="relative py-26 overflow-hidden bg-gray-300">
+    <section className="relative py-26 overflow-hidden bg-section-navy-gradient border-b border-white/10">
       <div className="container-custom relative z-10 flex flex-col items-center text-center gap-8">
         <Reveal>
           <div className="flex flex-col items-center gap-4">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Gostou do que viu?{" "}
               <span className="italic font-light text-brand">Vamos conversar!</span>
             </h2>
@@ -28,9 +27,9 @@ export function CtaSection() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <p className="text-navy/65 text-lg md:text-xl leading-relaxed max-w-2xl">
+          <p className="text-white/65 text-lg md:text-xl leading-relaxed max-w-2xl">
             Nossa equipe está pronta para apresentar como a RX pode levar{" "}
-            <span className="text-navy font-semibold">transparência e controle</span>{" "}
+            <span className="text-white font-semibold">transparência e controle</span>{" "}
             à sua obra — do orçamento à entrega.
           </p>
         </Reveal>
@@ -50,7 +49,7 @@ export function CtaSection() {
               href={CONTACT.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              variant="outline-dark"
+              variant="outline"
               className="gap-2.5 text-base px-8 py-3.5"
             >
               <Instagram size={18} />
