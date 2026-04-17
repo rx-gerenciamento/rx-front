@@ -52,7 +52,7 @@ export function AboutSection() {
 
             <Reveal delay={0.2}>
               <p className="text-base font-semibold leading-relaxed text-brand">
-                Já somamos mais de R$ 328 milhões orçados e R$ 248 milhões em obras
+                Já somamos mais de R$ 1 bilhão orçados e R$ 248 milhões em obras
                 públicas, além de dezenas de empreendimentos acompanhados e
                 gerenciados em todo o Brasil.
               </p>

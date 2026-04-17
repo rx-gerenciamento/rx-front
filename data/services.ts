@@ -15,7 +15,7 @@ export const SERVICES: Service[] = [
   {
     id: "planejamento",
     name: "Planejamento de obras",
-    desc: "Cronograma físico-financeiro no prazo e orçamento.",
+    desc: "Cronograma físico em tempo real.",
     image: "/servicos/planejamento.png",
   },
   {
