@@ -20,7 +20,7 @@ export const FEATURED_PROJECTS: Project[] = [
     name: "Senhor Pastel",
     location: "Uberlândia",
     category: "Comercial",
-    images: ["/projects/senhorPastel/senhorPastel.jpeg", "/projects/senhorPastel/senhorPastel2.jpeg", "/projects/senhorPastel/senhorPastel3.jpeg", "/projects/senhorPastel/senhorPastel4.jpeg", "/projects/senhorPastel/senhorPastel5.jpeg"],
+    images: ["/projects/senhorPastel/senhorPastel4.jpeg", "/projects/senhorPastel/senhorPastel.jpeg", "/projects/senhorPastel/senhorPastel2.jpeg", "/projects/senhorPastel/senhorPastel3.jpeg", "/projects/senhorPastel/senhorPastel5.jpeg"],
     testimonial: {
       text: "Atendimento com muita qualidade e eficiência. São bem prestativos e atenciosos para solucionar as demandas necessárias.",
       author: "Senhor Pastel",
@@ -34,7 +34,7 @@ export const FEATURED_PROJECTS: Project[] = [
     name: "Instituto VO2",
     location: "Uberlândia",
     category: "Institucional",
-    images: ["/projects/institutoV02/instituto.jpeg", "/projects/institutoV02/instituto1.jpeg", "/projects/institutoV02/instituto2.jpeg", "/projects/institutoV02/instituto3.jpeg", "/projects/institutoV02/instituto4.jpeg"],
+    images: ["/projects/institutoV02/instituto2.jpeg", "/projects/institutoV02/instituto.jpeg", "/projects/institutoV02/instituto1.jpeg", "/projects/institutoV02/instituto4.jpeg", "/projects/institutoV02/instituto3.jpeg"],
     testimonial: {
       text: "A RX tornou a construção da nossa clínica impecável. Do projeto à execução, a equipe gerenciou tudo com excelência e transparência, garantindo tranquilidade e concretizando nosso sonho com perfeição.",
       author: "Instituto VO2",
@@ -65,7 +65,7 @@ export const OTHER_PROJECTS: Project[] = [
     name: "Casa Nature",
     location: "Uberlândia",
     category: "Residencial",
-    images: ["/projects/casaNature/casaNature.jpeg", "/projects/casaNature/casaNature2.jpeg", "/projects/casaNature/casaNature3.jpeg", "/projects/casaNature/casaNature4.jpeg", "/projects/casaNature/casaNature5.jpeg"],
+    images: ["/projects/casaNature/casaNature4.jpeg", "/projects/casaNature/casaNature.jpeg", "/projects/casaNature/casaNature2.jpeg", "/projects/casaNature/casaNature3.jpeg", "/projects/casaNature/casaNature5.jpeg"],
     description:
       "Projeto residencial de alto padrão com integração ao ambiente natural e uso de materiais sustentáveis.",
   },
@@ -83,7 +83,7 @@ export const OTHER_PROJECTS: Project[] = [
     name: "Localiza Aeroporto",
     location: "Uberlândia",
     category: "Institucional",
-    images: ["/projects/localiza/localiza.jpeg", "/projects/localiza/localiza1.jpeg", "/projects/localiza/localiza2.jpeg", "/projects/localiza/localiza3.jpeg", "/projects/localiza/localiza4.jpeg"],
+    images: ["/projects/localiza/localiza4.jpeg", "/projects/localiza/localiza.jpeg", "/projects/localiza/localiza1.jpeg", "/projects/localiza/localiza2.jpeg", "/projects/localiza/localiza3.jpeg"],
     description:
       "Posto de atendimento no Aeroporto de Uberlândia com restrições logísticas complexas, executado com total organização.",
   },
