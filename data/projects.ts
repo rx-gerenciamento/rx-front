@@ -20,7 +20,7 @@ export const FEATURED_PROJECTS: Project[] = [
     name: "Senhor Pastel",
     location: "Uberlândia",
     category: "Comercial",
-    images: ["/servicos/gerenciamento.png", "/servicos/gestao.png"],
+    images: ["/projects/senhorPastel/senhorPastel.jpeg", "/projects/senhorPastel/senhorPastel2.jpeg", "/projects/senhorPastel/senhorPastel3.jpeg", "/projects/senhorPastel/senhorPastel4.jpeg", "/projects/senhorPastel/senhorPastel5.jpeg"],
     testimonial: {
       text: "Atendimento com muita qualidade e eficiência. São bem prestativos e atenciosos para solucionar as demandas necessárias.",
       author: "Senhor Pastel",
@@ -34,7 +34,7 @@ export const FEATURED_PROJECTS: Project[] = [
     name: "Instituto VO2",
     location: "Uberlândia",
     category: "Institucional",
-    images: ["/servicos/orcamento.png", "/servicos/gerenciamento.png", "/servicos/gestao.png"],
+    images: ["/projects/institutoV02/instituto.jpeg", "/projects/institutoV02/instituto1.jpeg", "/projects/institutoV02/instituto2.jpeg", "/projects/institutoV02/instituto3.jpeg", "/projects/institutoV02/instituto4.jpeg"],
     testimonial: {
       text: "A RX tornou a construção da nossa clínica impecável. Do projeto à execução, a equipe gerenciou tudo com excelência e transparência, garantindo tranquilidade e concretizando nosso sonho com perfeição.",
       author: "Instituto VO2",
@@ -65,7 +65,7 @@ export const OTHER_PROJECTS: Project[] = [
     name: "Casa Nature",
     location: "Uberlândia",
     category: "Residencial",
-    images: ["/servicos/gestao.png", "/servicos/acompanhamento.png"],
+    images: ["/projects/casaNature/casaNature.jpeg", "/projects/casaNature/casaNature2.jpeg", "/projects/casaNature/casaNature3.jpeg", "/projects/casaNature/casaNature4.jpeg", "/projects/casaNature/casaNature5.jpeg"],
     description:
       "Projeto residencial de alto padrão com integração ao ambiente natural e uso de materiais sustentáveis.",
   },
@@ -74,7 +74,7 @@ export const OTHER_PROJECTS: Project[] = [
     name: "Edifício RT",
     location: "Uberlândia",
     category: "Corporativo",
-    images: ["/servicos/orcamento.png", "/servicos/gerenciamento.png"],
+    images: ["/projects/rt/rt.jpeg", "/projects/rt/rt2.jpeg", "/projects/rt/rt3.jpeg", "/projects/rt/rt4.jpeg", "/projects/rt/rt5.jpeg"],
     description:
       "Edifício corporativo com 8 andares gerenciado com metodologia BIM. Zero retrabalho e entrega no prazo.",
   },
@@ -83,7 +83,7 @@ export const OTHER_PROJECTS: Project[] = [
     name: "Localiza Aeroporto",
     location: "Uberlândia",
     category: "Institucional",
-    images: ["/servicos/planejamento.png", "/servicos/gestao.png"],
+    images: ["/projects/localiza/localiza.jpeg", "/projects/localiza/localiza1.jpeg", "/projects/localiza/localiza2.jpeg", "/projects/localiza/localiza3.jpeg", "/projects/localiza/localiza4.jpeg"],
     description:
       "Posto de atendimento no Aeroporto de Uberlândia com restrições logísticas complexas, executado com total organização.",
   },
@@ -110,7 +110,7 @@ export const OTHER_PROJECTS: Project[] = [
     name: "Concessionária Omoda Jaecoo",
     location: "Uberlândia",
     category: "Comercial",
-    images: ["/servicos/orcamento.png", "/servicos/acompanhamento.png"],
+    images: ["/projects/jaecoo/jaecoo.jpeg", "/projects/jaecoo/jaecoo1.jpeg", "/projects/jaecoo/jaecoo2.jpeg", "/projects/jaecoo/jaecoo3.jpeg", "/projects/jaecoo/jaecoo4.jpeg"],
     description:
       "Construção de concessionária automotiva com projeto de alto padrão e execução dentro do cronograma exigido pela marca.",
   },
