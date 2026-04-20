@@ -1,8 +1,3 @@
-export type ProjectStat = {
-  label: string
-  value: string
-}
-
 export type ProjectTestimonial = {
   text: string
   author: string
@@ -16,6 +11,5 @@ export type Project = {
   category: string
   images: string[]
   testimonial?: ProjectTestimonial
-  description: string
   year?: string
 }

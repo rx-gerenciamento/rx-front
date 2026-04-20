@@ -108,20 +108,16 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
         </div>
 
         {/* Content */}
-        <div className={`p-6 grid gap-6 ${project.testimonial ? "md:grid-cols-2" : "md:grid-cols-1"}`}>
-          <div>
-            <h4 className="text-brand font-semibold text-sm uppercase tracking-widest mb-2">Sobre o Projeto</h4>
-            <p className="text-white/80 text-sm leading-relaxed">{project.description}</p>
-          </div>
-          {project.testimonial && (
+        {project.testimonial && (
+          <div className="p-6">
             <div className="bg-white/5 rounded-xl p-4 border-l-2 border-brand">
               <Quote size={20} className="text-brand mb-2" />
               <p className="text-white/80 text-sm leading-relaxed italic mb-3">{project.testimonial.text}</p>
               <p className="text-brand font-semibold text-sm">{project.testimonial.author}</p>
               <p className="text-white/40 text-xs">{project.testimonial.city}</p>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </motion.div>
     </motion.div>
   )
