@@ -82,9 +82,11 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
 
           {/* Project info overlay */}
           <div className="absolute bottom-4 left-5">
-            <span className="text-xs font-semibold text-white/60 uppercase tracking-widest">
-              {project.category}{project.year ? ` · ${project.year}` : ""}
-            </span>
+            {project.year && (
+              <span className="text-xs font-semibold text-white/60 uppercase tracking-widest">
+                {project.year}
+              </span>
+            )}
             <h3 className="text-2xl font-bold text-white">{project.name}</h3>
             <p className="text-white/60 text-sm">{project.location}</p>
           </div>

@@ -138,7 +138,6 @@ export function Projects() {
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="flex items-end justify-between gap-4">
                     <div>
-                      <span className="text-xs text-brand uppercase tracking-widest font-semibold">{project.category}</span>
                       <h3 className="text-white font-bold text-2xl leading-tight">{project.name}</h3>
                       <p className="text-white/50 text-sm">{project.location}</p>
                     </div>
@@ -211,7 +210,6 @@ export function Projects() {
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute inset-0 bg-brand/0 group-hover:bg-brand/10 transition-colors duration-200" />
                 <div className="absolute bottom-0 left-0 right-0 p-2.5">
-                  <span className="text-[10px] text-brand/80 uppercase tracking-widest font-semibold block">{project.category}</span>
                   <p className="text-white font-semibold text-xs leading-tight">{project.name}</p>
                 </div>
               </motion.div>
