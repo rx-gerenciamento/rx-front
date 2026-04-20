@@ -14,7 +14,7 @@ const WhatsAppIcon = () => (
 
 export function CtaSection() {
   return (
-    <section className="relative py-26 overflow-hidden bg-section-navy-gradient border-b border-white/10">
+    <section id="contato" className="relative py-26 overflow-hidden bg-section-navy-gradient border-b border-white/10">
       <div className="container-custom relative z-10 flex flex-col items-center text-center gap-8">
         <Reveal>
           <div className="flex flex-col items-center gap-4">

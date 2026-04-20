@@ -4,7 +4,7 @@ export const CONTACT = {
   email: "contato@rxgerenciamento.com.br",
   address: "R. Vinícius Degani, 901 - Vigilato Pereira, Uberlândia - MG, 38408-630",
   whatsappUrl: "https://wa.me/5534996928243",
-  instagram: "https://www.instagram.com/rxgerenciamento",
+  instagram: "https://www.instagram.com/rx.gerenciamento",
 } as const
 
 export function getWhatsAppUrl(message?: string) {

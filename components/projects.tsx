@@ -77,7 +77,7 @@ export function Projects() {
   const realIndex = ((active - n) % n + n) % n
 
   return (
-    <section className="relative py-24 overflow-hidden bg-white">
+    <section id="projetos" className="relative py-24 overflow-hidden bg-white">
       <div className="mb-12 text-center px-4">
         <Reveal>
           <SectionHeader

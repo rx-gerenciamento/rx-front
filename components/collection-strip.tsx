@@ -35,7 +35,7 @@ export function CollectionStrip() {
   }, [])
 
   return (
-    <section ref={containerRef} className="py-20 lg:py-20 overflow-hidden bg-navy">
+    <section id="servicos" ref={containerRef} className="py-20 lg:py-20 overflow-hidden bg-navy">
       <div className="mb-12">
         <Reveal>
           <div className="container-custom text-center">
