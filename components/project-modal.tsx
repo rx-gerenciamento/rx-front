@@ -47,12 +47,12 @@ export function ProjectModal({ project, onClose }: { project: Project; onClose: 
                 src={project.images[photoIndex]}
                 alt={`${project.name} — foto ${photoIndex + 1}`}
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </motion.div>
           </AnimatePresence>
 
-          <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-1/3 bg-linear-to-t from-black/80 to-transparent" />
 
           {/* Navigation arrows */}
           {project.images.length > 1 && (
