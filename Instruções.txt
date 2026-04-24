@@ -1,0 +1,143 @@
+INSTRUÇÕES PASSO A PASSO PARA COLOCAR O SITE NO AR
+
+======================================================================
+1. O QUE VOCÊ VAI PRECISAR
+======================================================================
+
+1) Um computador com internet.
+2) Uma conta de e‑mail que você acesse (Gmail, Outlook, etc.).
+3) Uma conta no GitHub (gratuita).
+4) Uma conta no Vercel (gratuita, com plano pago recomendado).
+5) Um cartão de crédito para comprar o domínio no registro.br.
+
+Obs.: GitHub é onde ficará guardado o código do site. Vercel é a plataforma que coloca o site no ar de forma automática. Registro.br é onde você compra o endereço do site (por exemplo, www.suaempresa.com.br).
+
+======================================================================
+2. PREPARAR O CÓDIGO NO GITHUB
+======================================================================
+
+2.1 Criar conta no GitHub
+
+1) Acesse: https://github.com
+2) Clique em "Sign up" (ou "Cadastre‑se").
+3) Siga os passos simples: e‑mail, senha e confirmação.
+
+2.2 Criar um novo repositório
+
+1) Ao entrar no GitHub, clique no botão "New" (Novo repositório).
+2) Dê um nome para o repositório, por exemplo: website.
+3) Deixe como "Private" (privado). 
+4) Clique em "Create repository".
+
+2.3 Enviar os arquivos do projeto para o GitHub (jeito simples, pelo navegador)
+
+1) No seu computador, abra a pasta do projeto (onde está este arquivo "Instruções.txt").
+2) Selecione todos os arquivos e pastas (Ctrl+A) e compacte em um arquivo .zip (por exemplo: website.zip).
+3) No GitHub, abra o repositório que você criou.
+4) Arraste o arquivo .zip para a área da página onde está escrito algo como "drag files here to upload".
+5) Aguarde o upload terminar.
+6) No final da página, clique em "Commit changes" (ou similar) para salvar.
+7) O GitHub irá mostrar os arquivos descompactados dentro do repositório.
+
+Pronto: o código do seu site está salvo no GitHub.
+
+======================================================================
+3. COLOCAR O SITE NO AR USANDO O VERCEL
+======================================================================
+
+O Vercel é hoje uma das formas mais simples e seguras para hospedar sites feitos com Next.js (que é o caso deste projeto).
+
+3.1 Criar conta no Vercel
+
+1) Acesse: https://vercel.com
+2) Clique em "Sign Up".
+3) Escolha entrar com sua conta do GitHub (recomendado).
+4) Autorize o acesso do Vercel ao GitHub quando for solicitado.
+
+3.2 Importar o projeto do GitHub para o Vercel
+
+1) No painel do Vercel, clique em "Add New..." > "Project".
+2) Na lista de repositórios, procure pelo repositório que você criou (website) e clique em "Import".
+3) Na tela de configuração:
+   - Framework: o Vercel deve reconhecer automaticamente como "Next.js".
+   - Build Command (comando de build): deixe como está (geralmente "next build").
+   - Output Directory: deixe como está (geralmente ".next").
+   - Environment Variables (variáveis de ambiente): Não é necessário configurar nada aqui.
+4) Clique em "Deploy".
+5) Aguarde alguns minutos até aparecer a mensagem de sucesso.
+
+O Vercel vai mostrar um endereço temporário, algo como:
+https://website-xxxx.vercel.app
+
+Se você abrir esse endereço no navegador, já verá o site funcionando.
+
+======================================================================
+4. COMPRAR E CONFIGURAR O DOMÍNIO NO REGISTRO.BR
+======================================================================
+
+Agora vamos fazer o site funcionar em um endereço do tipo:
+www.suaempresa.com.br
+
+4.1 Comprar o domínio no registro.br
+
+1) Acesse: https://registro.br
+2) No campo de busca, digite o nome que você quer (por exemplo: website.com.br).
+3) Clique em "Pesquisar".
+4) Se o domínio estiver disponível, clique em "Registrar".
+5) Crie sua conta no registro.br (caso ainda não tenha) e siga os passos para pagamento.
+6) Após o pagamento, o domínio ficará associado à sua conta.
+
+4.2 Conectar o domínio ao Vercel (jeito mais simples: usar os servidores DNS do Vercel)
+
+Este é o caminho mais fácil, porque o Vercel cuida automaticamente dos detalhes técnicos, incluindo o certificado de segurança (HTTPS, cadeado na barra do navegador).
+
+PASSO 1 – Adicionar o domínio no Vercel
+
+1) Volte para o Vercel (https://vercel.com) e acesse seu projeto.
+2) Na aba do projeto, procure a opção "Settings" (Configurações).
+3) Clique em "Domains" (Domínios).
+4) Clique em "Add" (Adicionar domínio).
+5) Digite o seu domínio completo, por exemplo: website.com.br
+6) Confirme a adição.
+7) O Vercel vai mostrar uma tela com instruções de DNS e, muito importante, vai mostrar quais "Nameservers" (servidores de nome) você deve usar. Eles terão nomes parecidos com:
+   ns1.vercel-dns.com
+   ns2.vercel-dns.com
+   (Anote exatamente os nomes que aparecerem para você.)
+
+PASSO 2 – Alterar os Nameservers no registro.br
+
+1) Acesse sua conta no registro.br.
+2) No painel, localize o domínio que você comprou (por exemplo: website.com.br).
+3) Clique no domínio para abrir os detalhes.
+4) Procure a seção "DNS" ou "Servidores DNS".
+5) Escolha a opção de "Utilizar servidores DNS próprios" (ou equivalente).
+6) Apague os servidores DNS antigos (se houver).
+7) Adicione os servidores DNS informados pelo Vercel (por exemplo, ns1.vercel-dns.com, ns2.vercel-dns.com, etc.).
+8) Salve as alterações.
+
+IMPORTANTE:
+   - As mudanças de DNS podem levar algumas horas para se espalhar pela internet (normalmente até 24 horas, mas muitas vezes acontece em menos de 1 hora).
+   - Enquanto isso, às vezes o domínio funciona em um computador e em outro ainda não. Isso é normal.
+
+PASSO 3 – Confirmar o domínio no Vercel
+
+1) Volte para o Vercel, na tela de "Domains" do seu projeto.
+2) O Vercel verifica automaticamente se o DNS já está apontando corretamente.
+3) Quando estiver tudo certo, você verá o status como "Valid" ou similar.
+4) A partir desse momento, seu site estará acessível em:
+   https://seu-dominio.com.br
+   e, se você configurou, também em:
+   https://www.seu-dominio.com.br
+
+O Vercel cuida automaticamente do certificado de segurança (HTTPS), então você verá o cadeado de site seguro no navegador.
+
+======================================================================
+5. COMO ATUALIZAR O SITE NO FUTURO
+======================================================================
+
+1) Peça para o desenvolvedor fazer as alterações nos arquivos do projeto.
+2) O desenvolvedor envia as mudanças para o repositório no GitHub (via commit/push).
+3) Assim que o GitHub é atualizado, o Vercel detecta a mudança e faz um novo deploy automaticamente.
+4) Depois de alguns minutos, o site no seu domínio já estará com a nova versão.
+
+Você não precisa mexer no Vercel nem no registro.br novamente, a menos que mude de domínio ou de plataforma.
