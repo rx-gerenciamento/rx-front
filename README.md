@@ -1,6 +1,6 @@
 # RX Gerenciamento — Site Institucional
 
-Site institucional da **RX Gerenciamento**, empresa especializada em orçamento, planejamento e gerenciamento de obras em todo o Brasil, com metodologia tradicional, BIM 4D e 5D.
+Site institucional da **RX Gerenciamento**
 
 ## Stack
 
