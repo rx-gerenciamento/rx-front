@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: "RX Gerenciamento | Obras sem surpresas",
   description: "Orçamento, planejamento e gerenciamento para todo o Brasil! Metodologia tradicional, BIM 4D e 5D",
   icons: {
-    icon: "/rxBlack.png",
+    icon: "/rxWhite.png",
   },
   openGraph: {
     siteName: "RX Geranciamento",
