@@ -1,4 +1,4 @@
-import type { Project } from "@/types/project"
+import type { Project } from "@/types/project";
 
 export const FEATURED_PROJECTS: Project[] = [
   {
@@ -6,7 +6,14 @@ export const FEATURED_PROJECTS: Project[] = [
     name: "Rivena Arquitetura",
     location: "Uberlândia",
     category: "Residencial",
-    images: ["/servicos/gestao.png", "/servicos/planejamento.png", "/servicos/acompanhamento.png"],
+    images: [
+      "/projects/rivena/01.PNG",
+      "/projects/rivena/02.PNG",
+      "/projects/rivena/03.PNG",
+      "/projects/rivena/04.PNG",
+      "/projects/rivena/05.jpeg",
+      "/projects/rivena/06.png",
+    ],
     testimonial: {
       text: "São muito assertivos nos orçamentos e cronogramas, uma ferramenta que pode mudar a gestão de obra. Recomendamos muito.",
       author: "Rivena Arquitetura",
@@ -18,7 +25,16 @@ export const FEATURED_PROJECTS: Project[] = [
     name: "Senhor Pastel",
     location: "Uberlândia",
     category: "Comercial",
-    images: ["/projects/senhorPastel/senhorPastel4.jpeg", "/projects/senhorPastel/senhorPastel.jpeg", "/projects/senhorPastel/senhorPastel2.jpeg", "/projects/senhorPastel/senhorPastel3.jpeg", "/projects/senhorPastel/senhorPastel5.jpeg"],
+    images: [
+      "/projects/senhorPastel/senhorPastel4.jpeg",
+      "/projects/senhorPastel/senhorPastel2.jpeg",
+      "/projects/senhorPastel/senhorPastel3.jpeg",
+      "/projects/senhorPastel/senhorPastel5.jpeg",
+      "/projects/senhorPastel/senhorPastel6.jpeg",
+      "/projects/senhorPastel/senhorPastel7.jpeg",
+      "/projects/senhorPastel/senhorPastel8.jpeg",
+      "/projects/senhorPastel/senhorPastel9.jpeg",
+    ],
     testimonial: {
       text: "Atendimento com muita qualidade e eficiência. São bem prestativos e atenciosos para solucionar as demandas necessárias.",
       author: "Senhor Pastel",
@@ -30,7 +46,12 @@ export const FEATURED_PROJECTS: Project[] = [
     name: "Instituto VO2",
     location: "Uberlândia",
     category: "Institucional",
-    images: ["/projects/institutoV02/instituto2.jpeg", "/projects/institutoV02/instituto.jpeg", "/projects/institutoV02/instituto1.jpeg", "/projects/institutoV02/instituto4.jpeg", "/projects/institutoV02/instituto3.jpeg"],
+    images: [
+      "/projects/institutoV02/instituto2.jpeg",
+      "/projects/institutoV02/instituto.jpeg",
+      "/projects/institutoV02/instituto1.jpeg",
+      "/projects/institutoV02/instituto3.jpeg",
+    ],
     testimonial: {
       text: "A RX tornou a construção da nossa clínica impecável. Do projeto à execução, a equipe gerenciou tudo com excelência e transparência, garantindo tranquilidade e concretizando nosso sonho com perfeição.",
       author: "Instituto VO2",
@@ -39,17 +60,21 @@ export const FEATURED_PROJECTS: Project[] = [
   },
   {
     id: 4,
-    name: "Melo Construtora",
-    location: "Uberlândia",
+    name: "Grupo Melo DF – Brasilia/DF",
+    location: "Brasília",
     category: "Corporativo",
-    images: ["/servicos/planejamento.png", "/servicos/acompanhamento.png", "/servicos/orcamento.png"],
+    images: [
+      "/projects/grupoMelo/1.PNG",
+      "/projects/grupoMelo/2.JPG",
+      "/projects/grupoMelo/3.JPG",
+    ],
     testimonial: {
       text: "A RX foi uma parceira essencial, trazendo ferramentas poderosas que otimizaram o acompanhamento e a gestão da obra. Desde o cronograma até a gestão em Power BI, agregaram muito valor aos nossos processos.",
-      author: "Melo Construtora",
-      city: "Uberlândia",
+      author: "Grupo Melo DF – Brasilia/DF",
+      city: "Brasília",
     },
   },
-]
+];
 
 export const OTHER_PROJECTS: Project[] = [
   {
@@ -57,41 +82,91 @@ export const OTHER_PROJECTS: Project[] = [
     name: "Casa Nature",
     location: "Uberlândia",
     category: "Residencial",
-    images: ["/projects/casaNature/casaNature4.jpeg", "/projects/casaNature/casaNature.jpeg", "/projects/casaNature/casaNature2.jpeg", "/projects/casaNature/casaNature3.jpeg", "/projects/casaNature/casaNature5.jpeg"],
+    images: [
+      "/projects/casaNature/casaNature4.jpeg",
+      "/projects/casaNature/casaNature.jpeg",
+      "/projects/casaNature/casaNature2.jpeg",
+      "/projects/casaNature/casaNature5.jpeg",
+    ],
   },
   {
     id: 6,
     name: "Edifício RT",
     location: "Uberlândia",
     category: "Corporativo",
-    images: ["/projects/rt/rt.jpeg", "/projects/rt/rt2.jpeg", "/projects/rt/rt3.jpeg", "/projects/rt/rt4.jpeg", "/projects/rt/rt5.jpeg"],
+    images: [
+      "/projects/rt/rt.jpeg",
+      "/projects/rt/rt1.jpeg",
+      "/projects/rt/rt2.jpeg",
+      "/projects/rt/rt3.jpeg",
+      "/projects/rt/rt4.jpeg",
+      "/projects/rt/rt5.jpeg",
+      "/projects/rt/rt6.jpeg",
+      "/projects/rt/rt7.jpeg",
+      "/projects/rt/rt8.jpeg",
+      "/projects/rt/rt9.jpeg",
+      "/projects/rt/rt10.jpeg",
+    ],
   },
   {
     id: 7,
     name: "Localiza Aeroporto",
     location: "Uberlândia",
     category: "Institucional",
-    images: ["/projects/localiza/localiza4.jpeg", "/projects/localiza/localiza.jpeg", "/projects/localiza/localiza1.jpeg", "/projects/localiza/localiza2.jpeg", "/projects/localiza/localiza3.jpeg"],
+    images: [
+      "/projects/localiza/localiza4.jpeg",
+      "/projects/localiza/localiza.jpeg",
+      "/projects/localiza/localiza1.jpeg",
+      "/projects/localiza/localiza2.jpeg",
+      "/projects/localiza/localiza3.jpeg",
+      "/projects/localiza/localiza5.jpeg",
+      "/projects/localiza/localiza6.jpeg",
+      "/projects/localiza/localiza7.jpeg",
+    ],
   },
   {
     id: 8,
     name: "OBUC — Gestão pré-obra",
     location: "Uberlândia",
     category: "Gestão",
-    images: ["/servicos/acompanhamento.png", "/servicos/planejamento.png"],
+    images: [
+      "/projects/obuc/obuc1.jpeg",
+      "/projects/obuc/obuc2.jpeg",
+      "/projects/obuc/obuc3.JPG",
+      "/projects/obuc/obuc4.jpeg",
+    ],
   },
   {
     id: 9,
     name: "Casa RM",
     location: "Uberlândia",
     category: "Residencial",
-    images: ["/servicos/gerenciamento.png", "/servicos/gestao.png"],
+    images: [
+      "/projects/casaRm/1.JPG",
+      "/projects/casaRm/2.JPG",
+      "/projects/casaRm/3.JPG",
+      "/projects/casaRm/4.JPG",
+      "/projects/casaRm/5.JPEG",
+    ],
   },
   {
     id: 10,
     name: "Concessionária Omoda Jaecoo",
     location: "Uberlândia",
     category: "Comercial",
-    images: ["/projects/jaecoo/jaecoo.jpeg", "/projects/jaecoo/jaecoo1.jpeg", "/projects/jaecoo/jaecoo2.jpeg", "/projects/jaecoo/jaecoo3.jpeg", "/projects/jaecoo/jaecoo4.jpeg"],
+    images: [
+      "/projects/jaecoo/jaecoo.jpeg",
+      "/projects/jaecoo/jaecoo1.jpeg",
+      "/projects/jaecoo/jaecoo3.jpeg",
+      "/projects/jaecoo/jaecoo4.jpeg",
+      "/projects/jaecoo/jaecoo5.jpeg",
+      "/projects/jaecoo/jaecoo6.jpeg",
+      "/projects/jaecoo/jaecoo7.jpeg",
+      "/projects/jaecoo/jaecoo8.jpeg",
+      "/projects/jaecoo/01.PNG",
+      "/projects/jaecoo/02.PNG",
+      "/projects/jaecoo/04.PNG",
+      "/projects/jaecoo/05.PNG",
+    ],
   },
-]
+];

@@ -1,12 +1,23 @@
 "use client"
 
-import { motion, useScroll, useTransform } from "framer-motion"
-import { useRef } from "react"
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
+import { useRef, useState, useEffect } from "react"
 import Image from "next/image"
 import { Reveal } from "./reveal"
 import { Button } from "./ui/button"
 import { AnimatedText } from "./animated-text"
-import { getWhatsAppUrl, WHATSAPP_DEFAULT_MESSAGE } from "@/constants/contact"
+import { getWhatsAppUrl, WHATSAPP_DEFAULT_MESSAGE, CONTACT } from "@/constants/contact"
+
+const BG_IMAGES = [
+  "/heroBg.png",
+  "/heroBg2.png",
+  "/heroBg3.png",
+  "/heroBg4.png",
+  "/heroBg5.png",
+  "/heroBg6.png",
+]
+
+const SLIDE_INTERVAL = 5000
 
 export function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -14,6 +25,17 @@ export function HeroSection() {
     target: containerRef,
     offset: ["start start", "end start"],
   })
+
+  const [currentIndex, setCurrentIndex] = useState(() =>
+    Math.floor(Math.random() * BG_IMAGES.length)
+  )
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % BG_IMAGES.length)
+    }, SLIDE_INTERVAL)
+    return () => clearInterval(timer)
+  }, [])
 
   const imageScale = useTransform(scrollYProgress, [0, 1], [1.05, 0.95])
   const imageY = useTransform(scrollYProgress, [0, 1], [0, -50])
@@ -29,14 +51,25 @@ export function HeroSection() {
         animate={{ scale: 1 }}
         transition={{ duration: 1.2, ease: [0.21, 0.47, 0.32, 0.98] }}
       >
-        <Image
-          src="/heroBg.png"
-          alt="RX Mentoria"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
+        <AnimatePresence mode="sync">
+          <motion.div
+            key={currentIndex}
+            className="absolute inset-0"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
+          >
+            <Image
+              src={BG_IMAGES[currentIndex]}
+              alt="RX Mentoria"
+              fill
+              className="object-cover"
+              priority={currentIndex === 0}
+              sizes="100vw"
+            />
+          </motion.div>
+        </AnimatePresence>
         <div className="absolute inset-0 hero-overlay" />
       </motion.div>
 
@@ -74,7 +107,7 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 1.0, ease: [0.21, 0.47, 0.32, 0.98] }}
             >
               <Button href={getWhatsAppUrl(WHATSAPP_DEFAULT_MESSAGE)} target="_blank" rel="noopener noreferrer">Fale conosco</Button>
-              <Button variant="outline">Conheça a RX</Button>
+              <Button variant="outline" href={CONTACT.instagram} target="_blank" rel="noopener noreferrer">Conheça a RX</Button>
             </motion.div>
           </Reveal>
         </div>

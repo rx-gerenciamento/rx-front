@@ -27,7 +27,7 @@ export const SERVICES: Service[] = [
     desc: "Cronograma físico em tempo real.",
     image: "/servicos/planejamento.png",
     details:
-      "Desenvolvimento de um cronograma físico-financeiro que garante a execução do projeto no prazo e dentro do orçamento, com técnica de Lean Construction e Gráfico de Gantt.",
+      "Desenvolvimento de um cronograma físico-financeiro que garante a execução do projeto no prazo e dentro do orçamento, com técnicas como Linha de Balanço e Gráfico de Gantt.",
     bullets: [
       "Cronograma realista e auditável",
       "Alinhamento entre custo e prazo",
@@ -42,9 +42,9 @@ export const SERVICES: Service[] = [
     details:
       "Supervisão constante para assegurar que cada etapa siga os padrões de qualidade exigidos, evitando atrasos e imprevistos.",
     bullets: [
+      "Gestão completa: material, mão de obra, compras",
       "Obra sem surpresas: custo e prazo sob controle",
-      "Assertividade tendendo a 100% com envolvimento da equipe",
-      "Gestão remota ou presencial (Uberlândia)",
+      "Modalidade presencial em Uberlândia/MG",
     ],
   },
   {
@@ -55,9 +55,9 @@ export const SERVICES: Service[] = [
     details:
       "Acompanhamento técnico com relatórios periódicos, cronogramas e metas, garantindo transparência e controle de prazos, integração com o ERP da empresa, custos e qualidade em cada etapa.",
     bullets: [
-      "Transparência e controle de prazos",
-      "Integração com ERP da empresa",
-      "Custos e qualidade em cada etapa",
+      "Dashboards com indicadores de custo e prazo",
+      "Atualização e reprogramação de cronograma",
+      "Modalidade remota e presencial (Uberlândia/MG)",
     ],
   },
   {
@@ -70,7 +70,7 @@ export const SERVICES: Service[] = [
     bullets: [
       "Rastreabilidade de quantitativos",
       "Gestão visual e simulação de cenários",
-      "Otimização de resultados",
+      "Otimização dos resultados e simulação 4D",
     ],
   },
 ]

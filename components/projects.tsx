@@ -12,18 +12,24 @@ import { FEATURED_PROJECTS, OTHER_PROJECTS } from "@/data/projects"
 
 const GAP = 24
 const n = FEATURED_PROJECTS.length
-const ITEMS = [...FEATURED_PROJECTS, ...FEATURED_PROJECTS, ...FEATURED_PROJECTS]
+// 5 copies give enough buffer for rapid manual navigation
+const COPIES = 5
+const ITEMS = Array.from({ length: COPIES }, () => FEATURED_PROJECTS).flat()
+const START = 2 * n // begin in the 3rd copy (middle)
+
+// Normalize any active index back to the 3rd copy [2n, 3n-1]
+const normalize = (a: number) => ((a % n) + n) % n + 2 * n
 
 export function Projects() {
   const [selected, setSelected] = useState<Project | null>(null)
-  const [active, setActive] = useState(n)
+  const [active, setActive] = useState(START)
   const [instant, setInstant] = useState(false)
 
   const wrapperRef = useRef<HTMLDivElement>(null)
   const firstCardRef = useRef<HTMLDivElement>(null)
   const [dims, setDims] = useState({ wrapper: 0, card: 0 })
   const timerRef = useRef<ReturnType<typeof setInterval>>(undefined)
-  const activeRef = useRef(n)
+  const activeRef = useRef(START)
 
   useEffect(() => {
     const measure = () => setDims({
@@ -53,6 +59,20 @@ export function Projects() {
     return () => clearInterval(timerRef.current)
   }, [startTimer])
 
+  // Infinite loop: when near boundary, wait for spring to settle then teleport
+  useEffect(() => {
+    if (instant) return
+    if (active < n || active >= (COPIES - 1) * n) {
+      const next = normalize(active)
+      const id = setTimeout(() => {
+        activeRef.current = next
+        setInstant(true)
+        setActive(next)
+      }, 500)
+      return () => clearTimeout(id)
+    }
+  }, [active, instant])
+
   const go = (dir: "prev" | "next") => {
     setInstant(false)
     setActive(prev => {
@@ -63,18 +83,7 @@ export function Projects() {
     startTimer()
   }
 
-  const handleAnimationComplete = () => {
-    if (instant) { setInstant(false); return }
-    const cur = activeRef.current
-    if (cur >= n * 2 || cur < n) {
-      const next = cur >= n * 2 ? cur - n : cur + n
-      activeRef.current = next
-      setInstant(true)
-      setActive(next)
-    }
-  }
-
-  const realIndex = ((active - n) % n + n) % n
+  const realIndex = ((active - START) % n + n) % n
 
   return (
     <section id="projetos" className="relative py-24 overflow-hidden bg-white">
@@ -111,7 +120,6 @@ export function Projects() {
           style={{ gap: GAP }}
           animate={{ x }}
           transition={instant ? { duration: 0 } : { type: "spring", stiffness: 300, damping: 32 }}
-          onAnimationComplete={handleAnimationComplete}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={0.12}
@@ -174,7 +182,7 @@ export function Projects() {
           <button
             key={i}
             onClick={() => {
-              const next = n + i
+              const next = START + i
               activeRef.current = next
               setInstant(false)
               setActive(next)
