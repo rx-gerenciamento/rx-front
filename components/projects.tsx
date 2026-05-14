@@ -149,15 +149,17 @@ export function Projects() {
                       <h3 className="text-white font-bold text-2xl leading-tight">{project.name}</h3>
                       <p className="text-white/50 text-sm">{project.location}</p>
                     </div>
-                    <motion.div
-                      className="hidden sm:block max-w-xs bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/10"
-                      animate={{ opacity: isActive ? 1 : 0, x: isActive ? 0 : 24 }}
-                      transition={{ duration: 0.45, delay: isActive ? 0.2 : 0 }}
-                    >
-                      <Quote size={14} className="text-brand mb-1" />
-                      <p className="text-white/80 text-xs leading-relaxed italic line-clamp-3">{project.testimonial?.text}</p>
-                      <p className="text-brand font-semibold text-xs mt-2">{project.testimonial?.author}</p>
-                    </motion.div>
+                    {project.testimonial && (
+                      <motion.div
+                        className="hidden sm:block max-w-xs bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/10"
+                        animate={{ opacity: isActive ? 1 : 0, x: isActive ? 0 : 24 }}
+                        transition={{ duration: 0.45, delay: isActive ? 0.2 : 0 }}
+                      >
+                        <Quote size={14} className="text-brand mb-1" />
+                        <p className="text-white/80 text-xs leading-relaxed italic line-clamp-3">{project.testimonial.text}</p>
+                        <p className="text-brand font-semibold text-xs mt-2">{project.testimonial.author}</p>
+                      </motion.div>
+                    )}
                   </div>
                 </div>
 

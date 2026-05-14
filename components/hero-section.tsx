@@ -12,7 +12,6 @@ const BG_IMAGES = [
   "/heroBg.png",
   "/heroBg2.png",
   "/heroBg3.png",
-  "/heroBg4.png",
   "/heroBg5.png",
   "/heroBg6.png",
 ]
@@ -26,11 +25,10 @@ export function HeroSection() {
     offset: ["start start", "end start"],
   })
 
-  const [currentIndex, setCurrentIndex] = useState(() =>
-    Math.floor(Math.random() * BG_IMAGES.length)
-  )
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
+    setCurrentIndex(Math.floor(Math.random() * BG_IMAGES.length))
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % BG_IMAGES.length)
     }, SLIDE_INTERVAL)
